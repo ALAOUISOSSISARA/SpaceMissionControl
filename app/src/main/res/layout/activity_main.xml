@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    android:background="#E8E4D0">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MISSION CONTROL"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.15"
+        android:textColor="#1C3150"
+        android:gravity="center"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Satellite Operations Center"
+        android:textSize="12sp"
+        android:textColor="#6B7BA4"
+        android:gravity="center"
+        android:layout_marginBottom="28dp"/>
+
+    <!-- Satellite Image -->
+    <ImageView
+        android:id="@+id/satelliteImg"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_gravity="center"
+        android:src="@drawable/satellite_icon"
+        android:contentDescription="Satellite"
+        android:layout_marginBottom="28dp"/>
+
+    <!-- Status Text -->
+    <TextView
+        android:id="@+id/txtMissionStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🛰️  Status: Standby"
+        android:textSize="14sp"
+        android:textColor="#1C3150"
+        android:gravity="center"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/orbitProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:max="100"
+        android:progress="0"
+        android:progressTint="#6B7BA4"
+        android:progressBackgroundTint="#A8BDB0"
+        android:background="#A8BDB0"
+        android:visibility="invisible"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- Buttons -->
+    <Button
+        android:id="@+id/btnLoadSatellite"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="📡  Load Satellite Feed"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="#A8BDB0"
+        android:textColor="#1C3150"
+        android:textSize="14sp"
+        android:letterSpacing="0.05"
+        android:stateListAnimator="@null"/>
+
+    <Button
+        android:id="@+id/btnOrbitalCalc"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="🔭  Orbital Calculation"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="#6B7BA4"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:letterSpacing="0.05"
+        android:stateListAnimator="@null"/>
+
+    <Button
+        android:id="@+id/btnPingControl"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="📶  Ping Control Tower"
+        android:backgroundTint="#1C3150"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:letterSpacing="0.05"
+        android:stateListAnimator="@null"/>
+
+</LinearLayout>
